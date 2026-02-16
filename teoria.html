@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <title>Il Prodigio | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link active">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Background Canvas -->
+    <canvas id="constellation-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;"></canvas>
+
+    <!-- Main Content -->
+    <div class="content-wrapper" style="padding-top: var(--nav-height);">
+        <div class="container">
+
+            <div style="text-align: center; margin: 4rem 0;">
+                <h1 class="heading-lg">Genealogie del Prodigio</h1>
+                <p class="subtitle">Cosmo, Caos e la polisemia del mostruoso</p>
+            </div>
+
+            <!-- Cerchio 1: O Kosmos (Visual Left, Text Right) -->
+            <section class="concept-section">
+                <div class="concept-visual">
+                    <div class="visual-node">ὁ κόσμος</div>
+                </div>
+                <div class="concept-text">
+                    <h2 class="heading-md" style="margin-bottom: 1rem; color: var(--color-bg-dark);">1. L'Ordine</h2>
+                    <p>
+                        Nella civiltà greca, sia il pensiero mitologico sia il pensiero filosofico tendono a immaginare
+                        l'universo come un tutto ordinato armonicamente. Mutano, nel tempo, i garanti dell'ordine: Zeus,
+                        la <em>φύσις</em>, Dio. L'idea del mondo organizzato secondo un ordine immutabile rimane però
+                        costante.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Cerchio 2: To Teras (Text Left, Visual Right) -->
+            <section class="concept-section" style="flex-direction: row;">
+                <div class="concept-text">
+                    <h2 class="heading-md" style="margin-bottom: 1rem; color: var(--color-bg-dark);">2. L'Anomalia</h2>
+                    <p>
+                        In questo ordine serafico possono manifestarsi delle anomalie incomprensibili per un sistema di
+                        pensiero che confida nella perfezione immutabile del cosmo. Il termine che i Greci usavano per
+                        indicare tali fenomeni prodigiosi è <em>τέρας</em>.
+                    </p>
+                </div>
+                <div class="concept-visual">
+                    <div class="visual-node">τὸ τέρας</div>
+                </div>
+            </section>
+
+            <!-- Cerchio 3: L'anti-cosmico (Visual Left, Text Right) -->
+            <section class="concept-section" style="margin-top: 2rem;">
+                <div class="concept-visual">
+                    <div class="visual-node" style="font-size: 1.2rem; width: 180px; height: 180px;">L'ANTI-COSMICO
+                    </div>
+                </div>
+                <div class="concept-text">
+                    <h2 class="heading-md" style="margin-bottom: 1rem; color: var(--color-bg-dark);">3. L'Anti-cosmico
+                    </h2>
+                    <p>
+                        Il termine <em>τέρας</em> identifica avvenimenti eccezionali e inconsueti, che sembrano
+                        svolgersi in maniera antitetica rispetto alla natura: potremmo definire <em>τέρας</em> tutto ciò
+                        che, essendo una perversione del cosmo inteso come universo ordinato, si pone ai suoi antipodi
+                        come anti-cosmico.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Sezione Polisemia -->
+            <section class="polysemy-section" style="margin-top: 6rem; margin-bottom: 6rem;">
+                <h2 class="heading-md" style="margin-bottom: 2rem;">La polisemia</h2>
+                <p style="margin-bottom: 2rem;">
+                    Il termine viene tradotto generalmente come prodigio, mostro, portento.
+                </p>
+
+                <div class="polysemy-grid">
+                    <span class="poly-box">prodigio</span>
+                    <span class="poly-box">mostro</span>
+                    <span class="poly-box">portento</span>
+                    <span class="poly-box highlight">anomalia</span>
+                </div>
+
+                <p style="margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Il <em>τέρας</em> può assumere svariate forme, molto diverse tra loro. Tutte queste forme hanno in
+                    comune tra loro l'anomalia, il porsi come altro rispetto alla norma.
+                </p>
+            </section>
+
+            <!-- Sezione Etimologia (Boxed) -->
+            <section style="margin: 6rem 0; text-align: center;">
+                <h2 class="heading-md" style="margin-bottom: 2rem;">Etimologia</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-muted);">
+                    Sono stati diversi i tentativi di risalire all’origine di questo lemma; ancora oggi, non tutti gli
+                    studiosi concordano sulla sua etimologia.
+                </p>
+
+                <div class="etymology-tabs">
+                    <button class="ety-tab active" onclick="openTab(event, 'kwer')">*kʷer</button>
+                    <button class="ety-tab" onclick="openTab(event, 'terh2')">*terh₂-</button>
+                </div>
+
+                <!-- Boxed Content -->
+                <div class="etymology-box">
+                    <div id="kwer" class="ety-content" style="display: block;">
+                        <p>La tesi più condivisa tra gli studiosi ipotizza la sua derivazione dalla radice indoeuropea
+                            <strong>*kʷer</strong>, legata all’azione del fare. Il valore di prodigio o creatura
+                            mostruosa rappresenta una specializzazione secondaria, sviluppatasi all’interno della
+                            tradizione greca a partire da una base concettuale più astratta, radicata nell’idea
+                            indoeuropea del ‘fare che produce effetti’.
+                        </p>
+                    </div>
+
+                    <div id="terh2" class="ety-content" style="display: none;">
+                        <p>Secondo un’ipotesi alternativa, il sostantivo deriverebbe dalla radice indoeuropea
+                            <strong>*terh₂-</strong> legata invece all’attraversamento. Il τέρας sarebbe ciò che va
+                            oltre l’ordinario, oltre l’esperienza canonica.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sezione Le Forme del Prodigio (Static Cards) -->
+            <section style="margin: 6rem 0; text-align: center;">
+                <h2 class="heading-md" style="margin-bottom: 3rem;">Le forme del prodigio</h2>
+
+                <div class="figurine-grid">
+
+                    <!-- Card 1: Serpente -->
+                    <div class="figurine-card-static">
+                        <h3 class="static-card-title">Serpente</h3>
+                        <div class="static-img-wrapper">
+                            <img src="1.jpg" alt="Serpente" class="static-img" style="transform: scale(1.30);">
+                        </div>
+                        <div style="padding: 0.5rem; text-align: left; font-size: 0.9rem;">
+                            <p class="greek-verse-card" style="color:var(--color-bg-dark); margin-bottom: 0.5rem;">
+                                Τρῶες δ’ ἐρρίγησαν ὅπως ἴδον αἰόλον ὄφιν κείμενον ἐν μέσσοισι Διὸς τέρας αἰγιόχοιο.
+                            </p>
+                            <p class="cite-source"
+                                style="text-align: right; color: var(--color-text-muted); font-size: 0.8rem;">
+                                <em>Il</em> XII 209.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Stella cadente -->
+                    <div class="figurine-card-static">
+                        <h3 class="static-card-title">Stella cadente</h3>
+                        <div class="static-img-wrapper">
+                            <img src="2.jpg" alt="Stella cadente" class="static-img">
+                        </div>
+                        <div style="padding: 0.5rem; text-align: left; font-size: 0.9rem;">
+                            <p class="greek-verse-card" style="color:var(--color-bg-dark); margin-bottom: 0.5rem;">
+                                οἷον δ’ ἀστέρα ἧκε Κρόνου πάϊς ἀγκυλομήτεω ἢ ναύτῃσι τέρας ἠὲ στρατῷ εὐρέϊ λαῶν λαμπρόν·
+                                τοῦ δέ τε πολλοὶ ἀπὸ σπινθῆρες ἵενται.
+                            </p>
+                            <p class="cite-source"
+                                style="text-align: right; color: var(--color-text-muted); font-size: 0.8rem;">
+                                <em>Il</em> IV 76.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Tuono improvviso -->
+                    <div class="figurine-card-static">
+                        <h3 class="static-card-title">Tuono improvviso</h3>
+                        <div class="static-img-wrapper">
+                            <img src="3.jpg" alt="Tuono improvviso" class="static-img" style="transform: scale(1.60);">
+                        </div>
+                        <div style="padding: 0.5rem; text-align: left; font-size: 0.9rem;">
+                            <p class="greek-verse-card" style="color:var(--color-bg-dark); margin-bottom: 0.5rem;">
+                                "φήμην τίς μοι φάσθω ἐγειρομένων ἀνθρώπων ἔνδοθεν, ἔκτοσθεν δὲ Διὸς τέρας ἄλλο φανήτω.”
+                                ὣς ἔφατ’ εὐχόμενος· τοῦ δ’ ἔκλυε μητίετα Ζεύς, αὐτίκα δ’ ἐβρόντησεν ἀπ’ αἰγλήεντος
+                                Ὀλύμπου, ὑψόθεν ἐκ νεφέων· γήθησε δὲ δῖος Ὀδυσσεύς.
+                            </p>
+                            <p class="cite-source"
+                                style="text-align: right; color: var(--color-text-muted); font-size: 0.8rem;">
+                                <em>Od</em>. XX 101.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Cerbero -->
+                    <div class="figurine-card-static">
+                        <h3 class="static-card-title">Cerbero</h3>
+                        <div class="static-img-wrapper">
+                            <img src="4.jpg" alt="Cerbero" class="static-img">
+                        </div>
+                        <div style="padding: 0.5rem; text-align: left; font-size: 0.9rem;">
+                            <p class="greek-verse-card" style="color:var(--color-bg-dark); margin-bottom: 0.5rem;">
+                                τόν θ’ ὑπὸ χθονὸς Ἅιδου τρίκρανον σκύλακ’, ἀπρόσμαχον τέρας, δεινῆς Ἐχίδνης θρέμμα
+                            </p>
+                            <p class="cite-source"
+                                style="text-align: right; color: var(--color-text-muted); font-size: 0.8rem;">Soph.
+                                <em>Trach</em>. 1098.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Sfinge -->
+                    <div class="figurine-card-static">
+                        <h3 class="static-card-title">Sfinge</h3>
+                        <div class="static-img-wrapper">
+                            <img src="5.jpg" alt="Sfinge" class="static-img">
+                        </div>
+                        <div style="padding: 0.5rem; text-align: left; font-size: 0.9rem;">
+                            <p class="greek-verse-card" style="color:var(--color-bg-dark); margin-bottom: 0.5rem;">
+                                μηδὲ τὸ παρθένιον πτερόν, οὔρειον τέρας, ἐλθεῖν πένθεα γαίας Σφίγγ’ ἀπομουσοτάταισι σὺν
+                                ὠιδαῖς, ἅ ποτε Καδμογενῆ τετραβάμοσι χαλαῖς τείχεσι χριμπτομένα
+                            </p>
+                            <p class="cite-source"
+                                style="text-align: right; color: var(--color-text-muted); font-size: 0.8rem;">Eur.
+                                <em>Phoen</em>. 806.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Tifone -->
+                    <div class="figurine-card-static">
+                        <h3 class="static-card-title">Tifone</h3>
+                        <div class="static-img-wrapper">
+                            <img src="6.jpg" alt="Tifone" class="static-img" style="transform: scale(1.30);">
+                        </div>
+                        <div style="padding: 0.5rem; text-align: left; font-size: 0.9rem;">
+                            <p class="greek-verse-card" style="color:var(--color-bg-dark); margin-bottom: 0.5rem;">
+                                τὸν γηγενῆ τε Κιλικίων οἰκήτορα ἄντρων ἰδὼν ᾤκτιρα, δάιον τέρας, ἑκατοντακάρανον πρὸς
+                                βίαν χειρούμενον, Τυφῶνα θοῦρον, πᾶσιν ὃς ἀντέστη θεοῖς, σμερδναῖσι γαμφηλαῖσι συρίζων
+                                φόβον, ἐξ ὀμμάτων δ’ ἤστραπτε γοργωπὸν σέλας, ὡς τὴν Διὸς τυραννίδ’ ἐκπέρσων βίᾳ.
+                            </p>
+                            <p class="cite-source"
+                                style="text-align: right; color: var(--color-text-muted); font-size: 0.8rem;">Aesch.
+                                <em>Prom</em>. 352
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="styled-footer">
+        <div class="container">
+            <p>&copy; 2026 Progetto “Prodigi e mostri anti-cosmici: un’analisi computazionale di τέρας nella tradizione
+                letteraria greca” – Licenza CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

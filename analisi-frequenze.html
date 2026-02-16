@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+
+    <title>Lista di Frequenza | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link active">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Split Layout -->
+    <div class="split-layout">
+
+        <!-- Left Pane: Visuals -->
+        <div class="visual-pane">
+            <h3 style="font-family: var(--font-heading); color: var(--color-text-muted); margin-bottom: 1rem;">Strumenti
+                di Visualizzazione</h3>
+
+            <!-- iframe 1: Word Cloud -->
+            <iframe class="visual-frame" style="height: 90vh !important;"
+                src="https://voyant-tools.org/tool/Cirrus/?palette=Category10&stopList=keywords-854db971992c04d4ab8f4a5b13689bbe&whiteList=&corpus=737b34cdb83ca8f15497288f413517bd"></iframe>
+
+            <!-- iframe 2: Frequencies Table -->
+            <iframe class="visual-frame" style="height: 90vh !important;"
+                src="https://voyant-tools.org/tool/CorpusTerms/?palette=Category10&stopList=keywords-854db971992c04d4ab8f4a5b13689bbe&corpus=737b34cdb83ca8f15497288f413517bd"></iframe>
+        </div>
+
+        <!-- Right Pane: Text Content -->
+        <div class="text-pane">
+            <div class="text-pane-content">
+                <h1 class="analysis-title">Lista di frequenza</h1>
+
+
+                <h4 class="analysis-subtitle" style="color: var(--color-accent-gold);">Cos'è?</h4>
+                <p class="analysis-text">
+                    Una lista di frequenze mostra quante volte ogni lemma compare nel corpus e ordina in modo gerarchico
+                    i risultati, dal più frequente al meno frequente. Questo strumento è utile per individuare quali
+                    nuclei tematici dominano i contesti in cui appare il prodigio.
+                </p>
+
+                <div style="margin-top: 3rem;">
+                    <!-- Result 1 -->
+                    <!-- Result 1 -->
+                    <!-- Result 1 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">1. θεός – 228 occorrenze</h4>
+                        <p class="analysis-text" style="margin-top: 0.5rem;">
+                            La parola "dio" è la seconda più frequente nel corpus. <br>
+                            <strong>Cosa significa:</strong> Conferma la centralità della sfera religiosa. Il prodigio è
+                            legato all'intervento divino: sin dall'uso omerico τέρας trasmette un messaggio degli
+                            Olimpi; nei testi cristiani è segno della potenza di Dio.
+                        </p>
+                    </div>
+
+                    <!-- Result 2 -->
+                    <!-- Result 2 -->
+                    <!-- Result 2 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">2. σημεῖον – 220 occorrenze</h4>
+                        <p class="analysis-text" style="margin-top: 0.5rem;">
+                            La parola "segno" occupa il terzo posto, quasi alla pari con "dio". <br>
+                            <strong>Cosa significa:</strong> L'associazione τέρας-σημεῖον è frequente, ma fortemente
+                            sbilanciata verso le traduzioni del Vecchio Testamento, il Nuovo Testamento e la letteratura
+                            cristiana. Il prodigio è un segno da interpretare, un messaggio della volontà divina.
+                        </p>
+                    </div>
+
+                    <!-- Result 3 -->
+                    <!-- Result 3 -->
+                    <!-- Result 3 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">3. κύριος – 148 occorrenze</h4>
+                        <p class="analysis-text" style="margin-top: 0.5rem;">
+                            <strong>Cosa significa:</strong> Epiteto di Dio nei testi giudaico-cristiani ("Signore"). Ma
+                            il valore autoritario del termine appartiene anche alla tradizione greca antica, dove figura
+                            tra gli epiteti di Zeus.
+                            Conferma l'impronta religiosa dominante del corpus.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; margin-bottom: 4rem;">
+                    <a href="analisi-collocazioni.html" class="cta-button"
+                        style="background-color: var(--color-bg-dark); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase;">
+                        Vai alla lista di collocazioni <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

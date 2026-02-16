@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+
+    <title>Analisi Mostro | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link active">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Split Layout -->
+    <div class="split-layout">
+
+        <!-- Left Pane: Visuals -->
+        <div class="visual-pane">
+            <h3 style="font-family: var(--font-heading); color: var(--color-text-muted); margin-bottom: 1rem;">Albero
+                delle Mostruosità</h3>
+
+            <img src="tree.png" alt="Tree Visual of Monstrosity"
+                style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); min-height: 80vh; object-fit: contain;">
+        </div>
+
+        <!-- Right Pane: Text Content -->
+        <div class="text-pane">
+            <div class="text-pane-content">
+                <h1 class="analysis-title">Prodigi mostruosi e mostri prodigiosi</h1>
+
+                <h4 class="analysis-subtitle" style="color: var(--color-accent-gold);">La domanda</h4>
+                <p class="analysis-text">
+                    In che modo τέρας è legato alla sfera del mostruoso? Che forma di mostruosità delinea?
+                </p>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Il metodo</h4>
+                    <p class="analysis-text">
+                        Dalla lista di collocazioni si sono isolati i lemmi con referente morfologicamente definito:
+                        nomi di
+                        creature mitiche (Χίμαιρα, Σφίγξ), termini per deformità (πολυκέφαλος, ἑρμαφρόδιτος), animali
+                        qualificati esplicitamente come prodigiosi.
+                    </p>
+                </div>
+
+                <div
+                    style="border: 1px solid var(--color-line); padding: 1.5rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+                    <strong style="font-size: 1.2rem; color: var(--color-bg-dark);">IL DATO:</strong><br>
+                    23 attestazioni su 614 totali (3,7%)
+                </div>
+
+                <p class="analysis-text">
+                    La configurazione mostruosa è attestata ma non prevalente. Solo il 3,7% delle occorrenze ha un
+                    legame con la sfera del mostruoso.
+                    Il τέρας è polisemico: la mostruosità è una delle manifestazioni possibili, non l'unica né la
+                    principale.
+                </p>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Tre forme di mostruosità</h4>
+                    <p class="analysis-text">La lettura dei 23 contesti ha rivelato tre modalità in cui si realizza la
+                        mostruosità:</p>
+
+                    <div style="margin-top: 2rem;">
+                        <!-- 1 -->
+                        <div
+                            style="margin-bottom: 2rem; border-left: 3px solid var(--color-accent-gold); padding-left: 1rem;">
+                            <h5
+                                style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-accent-gold); margin-bottom: 0.5rem;">
+                                1. MOSTRUOSITÀ ONTOLOGICA (8 casi)</h5>
+                            <p class="analysis-text">
+                                Creature mitologiche la cui alterità è costitutiva.<br>
+                                <strong>Esempi:</strong> Chimera, Sfinge, Cerbero, Tifone<br>
+                                Esseri che appartengono al mito, ontologicamente alieni all'ordine naturale.
+                            </p>
+                        </div>
+
+                        <!-- 2 -->
+                        <div
+                            style="margin-bottom: 2rem; border-left: 3px solid var(--color-accent-gold); padding-left: 1rem;">
+                            <h5
+                                style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-accent-gold); margin-bottom: 0.5rem;">
+                                2. MOSTRUOSITÀ MORFOLOGICA (6 casi)</h5>
+                            <p class="analysis-text">
+                                Esseri afflitti da deformità fisiche o anomalie anatomiche. La mostruosità riguarda la
+                                forma
+                                esterna, risiede nel corpo deformato.<br>
+                                <strong>Esempi:</strong> Ermafroditi, anomalie congenite, nascite contro natura<br>
+                                Il τέρας è deviazione biologica dalla norma.
+                            </p>
+                        </div>
+
+                        <!-- 3 -->
+                        <div
+                            style="margin-bottom: 2rem; border-left: 3px solid var(--color-accent-gold); padding-left: 1rem;">
+                            <h5
+                                style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-accent-gold); margin-bottom: 0.5rem;">
+                                3. MOSTRUOSITÀ ATTRIBUTIVA (8 casi)</h5>
+                            <p class="analysis-text">
+                                Enti naturalmente ordinari investiti di valenza prodigiosa per la loro funzione. La
+                                mostruosità non è nella forma, ma nel significato.<br>
+                                <strong>Esempi:</strong> Serpenti, rettili, leoni.<br>
+                                Il τέρας non è tale per natura o per deformazione, ma in quanto investito di valore
+                                simbolico.
+                            </p>
+                        </div>
+
+                        <!-- 4 - Metalinguistic -->
+                        <div
+                            style="margin-bottom: 2rem; border-left: 3px solid var(--color-accent-gold); padding-left: 1rem;">
+                            <h5
+                                style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-accent-gold); margin-bottom: 0.5rem;">
+                                RIFLESSIONE METALINGUISTICA (1 caso)</h5>
+                            <p class="analysis-text">
+                                Un'occorrenza si distingue: il termine τέρας diventa oggetto di riflessione teorica. Non
+                                si
+                                descrive un mostro, ma si definisce cosa sia τέρας.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Risposta</h4>
+                    <p class="analysis-text" style="margin-top: 0.5rem;">
+                        Il τέρας oscilla tra astrazione mitica, concretezza corporea e contingenza ermeneutica.
+                        Il prodigio non è "il mostro". È piuttosto un concetto che può includere il mostruoso, ma che
+                        abbraccia fenomeni molto più ampi. Tra "mostri prodigiosi" e "prodigi mostruosi", il τέρας si
+                        muove su un terreno semantico fluido.
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; margin-bottom: 4rem;">
+                    <a href="analisi-natura.html" class="cta-button"
+                        style="background-color: var(--color-bg-dark); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase;">
+                        VAI A NATURA <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

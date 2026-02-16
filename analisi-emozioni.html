@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+
+    <title>Analisi Emozioni | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cluster-box {
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .cluster-paura-bg {
+            background-color: #fff !important;
+            color: #9b59b6 !important;
+            border: 2px solid #9b59b6 !important;
+        }
+
+        /* Purple */
+        .cluster-stupore-bg {
+            background-color: #fff !important;
+            color: #fd79a8 !important;
+            /* Pink text */
+            border: 2px solid #fd79a8 !important;
+            /* Pink border */
+        }
+
+        /* Pink */
+
+        .word-tag {
+            display: inline-block;
+            background: rgba(155, 89, 182, 0.1);
+            /* Light purple default */
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            margin: 0.3rem;
+            font-size: 0.9rem;
+            color: #2d3436;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link active">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Split Layout -->
+    <div class="split-layout">
+
+        <!-- Left Pane: Visuals -->
+        <div class="visual-pane">
+            <h3 style="font-family: var(--font-heading); color: var(--color-text-muted); margin-bottom: 2rem;">Cluster
+                Emozionali</h3>
+
+            <!-- Inverted Order: Clusters first, then Graph -->
+
+            <!-- Cluster Paura -->
+            <div class="cluster-box cluster-paura-bg">
+                <h4 style="margin: 0 0 1rem 0; font-family: var(--font-heading);">Cluster Paura</h4>
+                <div class="cluster-words">
+                    <span class="word-tag">φοβέω (4)</span>
+                    <span class="word-tag">φόβος (4)</span>
+                    <span class="word-tag">ταράσσω (4)</span>
+                    <span class="word-tag">δείδω (4)</span>
+                    <span class="word-tag">δέος (2)</span>
+                    <span class="word-tag">φοβερός (2)</span>
+                    <span class="word-tag">δεῖμα (1)</span>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">Destabilizzazione e terrore di fronte
+                    all'anomalia.</p>
+            </div>
+
+            <!-- Cluster Stupore -->
+            <div class="cluster-box cluster-stupore-bg">
+                <h4 style="margin: 0 0 1rem 0; font-family: var(--font-heading);">Cluster Stupore</h4>
+                <div class="cluster-words">
+                    <span class="word-tag" style="background: rgba(253, 121, 168, 0.1);">θαυμάσιος (13)</span>
+                    <span class="word-tag" style="background: rgba(253, 121, 168, 0.1);">θαυμαστός (6)</span>
+                    <span class="word-tag" style="background: rgba(253, 121, 168, 0.1);">θαῦμα (6)</span>
+                    <span class="word-tag" style="background: rgba(253, 121, 168, 0.1);">θαυμάζω (5)</span>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">Meraviglia cognitiva e ammirazione per il
+                    segno divino.</p>
+            </div>
+
+            <!-- Network Image -->
+            <img src="Network.png" alt="Emotional Network Graph"
+                style="width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 2rem;">
+
+        </div>
+
+        <!-- Right Pane: Text Content -->
+        <div class="text-pane">
+            <div class="text-pane-content">
+                <h1 class="analysis-title">La reazione emotiva</h1>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">La domanda</h4>
+                    <p class="analysis-text">
+                        Quali reazioni causa un’apparizione prodigiosa? Cosa prova chi assiste al prodigio? Con quale
+                        frequenza si manifestano queste emozioni? Il τέρας si distingue come avvenimento eccezionale e
+                        la
+                        sua straordinarietà lo caratterizza inevitabilmente come elemento perturbante. Lo spettatore del
+                        prodigio non può che essere destabilizzato di fronte alla sua anomala essenza caotica.
+                    </p>
+                </div>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Il metodo</h4>
+                    <p class="analysis-text">
+                        Dalla lista di collocazioni si sono isolati i lemmi semanticamente legati alla paura o allo
+                        stupore,
+                        organizzandoli in due cluster.
+                    </p>
+
+                    <h4 class="collo-header" style="margin-top: 1.5rem;">I dati</h4>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <strong style="color: #9b59b6;">Cluster della paura | 7 lemmi, 22 occorrenze</strong>
+                        <p class="analysis-text">φοβέω (4), φόβος (4), ταράσσω (4), δείδω (4),
+                            δέος (2), φοβερός (2), δεῖμα (1)</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <strong style="color: #fd79a8;">Cluster dello stupore | 4 lemmi, 31 occorrenze</strong>
+                        <p class="analysis-text">θαυμάσιος (13), θαυμαστός (6), θαῦμα (6),
+                            θαυμάζω (5)</p>
+                    </div>
+                </div>
+
+                <div class="collocazione-item">
+                    <div
+                        style="background: #fff; padding: 1.5rem; border-left: 4px solid var(--color-accent-gold); margin: 0 0 2rem 0;">
+                        <h5
+                            style="margin-top: 0; color: var(--color-bg-dark); font-size: 1.1rem; font-family: var(--font-heading);">
+                            Vox media: ambivalenza di θαμβέω</h5>
+                        <p class="analysis-text">Le sue 2 occorrenze sono state verificate nei testi:</p>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-arrow-right"
+                                    style="font-size: 0.8rem; color: var(--color-accent-gold);"></i> Eschilo, Supplici →
+                                Contesto di terrore (δεῖμα, tremare) = <strong>paura</strong></li>
+                            <li><i class="fas fa-arrow-right"
+                                    style="font-size: 0.8rem; color: var(--color-accent-gold);"></i> Apollonio Rodio,
+                                Argonautiche → Contesto di gioia (γηθήσας) = <strong>stupore</strong></li>
+                        </ul>
+                    </div>
+
+                    <h4 class="collo-header">Risposta</h4>
+                    <p class="analysis-text">
+                        Il prodigio suscita prevalentemente stupore cognitivo: 31 occorrenze contro 22, espresse
+                        attraverso
+                        un vocabolario morfologicamente compatto e quasi formulare. La paura, pur meno frequente, si
+                        articola su un ventaglio lessicale più ampio, declinandosi in sette radici diverse che colgono
+                        sfumature specifiche del turbamento (timore, sgomento, agitazione).
+                    </p>
+                    <p class="analysis-text" style="margin-top: 1rem;">
+                        Le due reazioni non coesistono nei medesimi contesti testuali. L'apparizione straordinaria del
+                        τέρας
+                        provoca una polarizzazione: lo spettatore è destabilizzato, ma la natura di questa
+                        destabilizzazione
+                        si orienta selettivamente verso una delle due sfere.
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; margin-bottom: 4rem;">
+                    <a href="analisi-mostro.html" class="cta-button"
+                        style="background-color: var(--color-bg-dark); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase;">
+                        Vai al mostruoso <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+
+    <title>Metodologia | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link active">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Background Canvas -->
+    <canvas id="constellation-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;"></canvas>
+
+    <!-- Main Content -->
+    <div class="content-wrapper" style="padding-top: var(--nav-height);">
+        <div class="container" style="max-width: 1100px;">
+
+            <div style="text-align: center; max-width: 800px; margin: 4rem auto;">
+                <h1 class="heading-lg">Metodo e strumenti</h1>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-main); margin-top: 1rem;">
+                    Questa ricerca adotta un approccio computazionale per esplorare il lessico di τέρας nella
+                    letteratura greca.
+                    Attraverso strumenti di Digital Humanities, è stato possibile analizzare un corpus esteso di
+                    attestazioni,
+                    individuando pattern semantici e ricorrenze che una lettura tradizionale difficilmente farebbe
+                    emergere.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-main); margin-top: 1rem;">
+                    <strong>Fasi del lavoro:</strong> L'indagine si è sviluppata attraverso quattro fasi successive:
+                    la raccolta dei testi, la costituzione del corpus, la preparazione dei dati e l'analisi
+                    computazionale.
+                </p>
+            </div>
+
+            <!-- Cards Grid (2x2 Layout) -->
+            <div class="mystery-grid" style="grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-bottom: 6rem;">
+
+                <!-- Card 1: Il Corpus -->
+                <div class="mystery-card"
+                    style="display: flex; flex-direction: column; height: 100%; border-left: 3px solid var(--color-accent-gold);">
+                    <div class="card-icon"><i class="fas fa-scroll"></i></div>
+                    <h3 style="color: var(--color-accent-gold);">1. Il Corpus</h3>
+                    <p style="flex-grow: 1; text-align: justify;">
+                        Il <a href="https://stephanus.tlg.uci.edu/" target="_blank"
+                            style="color:var(--color-bg-dark); text-decoration: underline;">Thesaurus Linguae Graecae
+                            (TLG)</a> è la più estesa biblioteca digitale di testi greci antichi. Da questo archivio
+                        sono risultate 3.703 attestazioni del lemma <em>τέρας</em>, distribuite su oltre duemila anni di
+                        produzione letteraria.<br><br>
+                        Data l'ampiezza dei risultati, si è operata una selezione mirata di 614 occorrenze,
+                        privilegiando il criterio della diacronicità: il corpus copre un arco temporale che va dall'VIII
+                        secolo a.C. (Omero) fino al II-III secolo d.C. (Origene).<br><br>
+                        Questa estensione cronologica permette di osservare la stratificazione semantica del termine
+                        attraverso epoche e generi letterari diversi: epica, tragedia, storiografia, filosofia, trattati
+                        scientifici.
+                    </p>
+                </div>
+
+                <!-- Card 2: Preparazione Dati -->
+                <div class="mystery-card"
+                    style="display: flex; flex-direction: column; height: 100%; border-left: 3px solid var(--color-accent-gold);">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3 style="color: var(--color-accent-gold);">2. Preparazione Dati</h3>
+                    <p style="flex-grow: 1; text-align: justify;">
+                        Prima di procedere all'analisi, i testi sono stati lemmatizzati: le diverse forme flesse del
+                        termine sono state ricondotte al lemma di base.<br><br>
+                        Questo processo è stato automatizzato attraverso il <a href="https://cltk.org/" target="_blank"
+                            style="color:var(--color-bg-dark); text-decoration: underline;">Classical Language Toolkit
+                            (CLTK)</a>, una libreria <a href="https://www.python.org/" target="_blank"
+                            style="color:var(--color-bg-dark); text-decoration: underline;">Python</a> specializzata nel
+                        trattamento computazionale delle lingue antiche.<br><br>
+                        La lemmatizzazione garantisce che l'analisi lessicale sia accurata e non distorta dalle
+                        variazioni morfologiche.
+                    </p>
+                </div>
+
+                <!-- Card 3: Voyant Tools -->
+                <div class="mystery-card"
+                    style="display: flex; flex-direction: column; height: 100%; border-left: 3px solid var(--color-accent-gold);">
+                    <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 style="color: var(--color-accent-gold);">3. Voyant Tools</h3>
+                    <p style="flex-grow: 1; text-align: justify;">
+                        L'analisi lessicale è stata condotta con <a href="https://voyant-tools.org/" target="_blank"
+                            style="color:var(--color-bg-dark); text-decoration: underline;">Voyant Tools</a>, una
+                        piattaforma web open-source che
+                        permette di esplorare corpus testuali attraverso visualizzazioni interattive.<br>
+                        Voyant offre strumenti per calcolare:<br><br>
+                        - <strong>Frequenze lessicali:</strong> quali parole compaiono più spesso accanto a τέρας?<br>
+                        - <strong>Collocazioni:</strong> quali termini ricorrono sistematicamente in prossimità del
+                        lemma?<br>
+                        - <strong>Concordanze (KWIC):</strong> in quali contesti testuali appare τέρας?<br>
+                        - <strong>Distribuzioni:</strong> come si distribuisce il termine attraverso il corpus?<br><br>
+                        L'interfaccia consente di passare agevolmente dalla visione d'insieme (distant reading) alla
+                        consultazione puntuale dei passi (close reading).
+                    </p>
+                </div>
+
+                <!-- Card 4: Il Metodo -->
+                <div class="mystery-card"
+                    style="display: flex; flex-direction: column; height: 100%; border-left: 3px solid var(--color-accent-gold);">
+                    <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3 style="color: var(--color-accent-gold);">4. Il Metodo</h3>
+                    <p style="flex-grow: 1; text-align: justify;">
+                        Questa ricerca adotta un approccio ibrido, che integra analisi quantitativa e interpretazione
+                        qualitativa. L'analisi computazionale non sostituisce la lettura filologica dei testi, ma ne
+                        amplia il campo di osservazione, permettendo di individuare pattern e ricorrenze su scala
+                        macroscopica.<br><br>
+                        Una volta estratti i dati quantitativi (distant reading), si è proceduto con una fase di
+                        verifica testuale (close reading): ogni risultato numerico è stato controllato tornando ai passi
+                        originali, per assicurare che le tendenze statistiche riflettessero effettivamente dinamiche
+                        semantiche significative.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Enhanced Timeline (Kept as requested "arco cronologico ok") -->
+            <div style="margin: 6rem auto; max-width: 900px; position: relative; padding: 2rem 0;">
+                <h3 class="heading-md" style="text-align: center; margin-bottom: 1rem;">L'Arco Cronologico</h3>
+                <p
+                    style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.1rem; line-height: 1.6;">
+                    Il corpus comprende testi di autori e generi diversi, coprendo un arco temporale pari a 10 secoli
+                </p>
+
+                <!-- Timeline Line -->
+                <div
+                    style="position: absolute; left: 50%; transform: translateX(-50%); top: 0; bottom: 0; width: 1px; background: rgba(0,0,0,0.1);">
+                </div>
+
+                <!-- Item 1 -->
+                <div
+                    style="position: relative; margin: 3rem 0; display: flex; justify-content: flex-end; padding-right: 50%;">
+                    <div
+                        style="position: absolute; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #fff; border: 2px solid var(--color-accent-gold); border-radius: 50%; z-index: 2;">
+                    </div>
+                    <div style="width: 90%; padding-right: 2rem; text-align: right;">
+                        <div
+                            style="font-family: var(--font-heading); font-weight: 700; color: var(--color-accent-gold);">
+                            VIII-VI a.C.</div>
+                        <div style="margin-top: 0.5rem;"><strong>Epica arcaica e poesia lirica.</strong><br>Omero,
+                            Esiodo, Tirteo, Stesicoro, Pindaro</div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                    style="position: relative; margin: 3rem 0; display: flex; justify-content: flex-start; padding-left: 50%;">
+                    <div
+                        style="position: absolute; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #fff; border: 2px solid var(--color-accent-gold); border-radius: 50%; z-index: 2;">
+                    </div>
+                    <div style="width: 90%; padding-left: 2rem; text-align: left;">
+                        <div
+                            style="font-family: var(--font-heading); font-weight: 700; color: var(--color-accent-gold);">
+                            V sec. a.C.</div>
+                        <div style="margin-top: 0.5rem;"><strong>Tragedia, commedia e storiografia.</strong><br>Eschilo,
+                            Sofocle, Euripide, Aristofane, Erodoto</div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                    style="position: relative; margin: 3rem 0; display: flex; justify-content: flex-end; padding-right: 50%;">
+                    <div
+                        style="position: absolute; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #fff; border: 2px solid var(--color-accent-gold); border-radius: 50%; z-index: 2;">
+                    </div>
+                    <div style="width: 90%; padding-right: 2rem; text-align: right;">
+                        <div
+                            style="font-family: var(--font-heading); font-weight: 700; color: var(--color-accent-gold);">
+                            IV sec. a.C.</div>
+                        <div style="margin-top: 0.5rem;"><strong>Filosofia e scienza.</strong><br>Platone e Aristotele
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div
+                    style="position: relative; margin: 3rem 0; display: flex; justify-content: flex-start; padding-left: 50%;">
+                    <div
+                        style="position: absolute; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #fff; border: 2px solid var(--color-accent-gold); border-radius: 50%; z-index: 2;">
+                    </div>
+                    <div style="width: 90%; padding-left: 2rem; text-align: left;">
+                        <div
+                            style="font-family: var(--font-heading); font-weight: 700; color: var(--color-accent-gold);">
+                            III-I a.C.</div>
+                        <div style="margin-top: 0.5rem;"><strong>L’età ellenistica.</strong><br>Teocrito, Callimaco,
+                            Apollonio Rodio, Polibio, Diodoro Siculo</div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div
+                    style="position: relative; margin: 3rem 0; display: flex; justify-content: flex-end; padding-right: 50%;">
+                    <div
+                        style="position: absolute; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #fff; border: 2px solid var(--color-accent-gold); border-radius: 50%; z-index: 2;">
+                    </div>
+                    <div style="width: 90%; padding-right: 2rem; text-align: right;">
+                        <div
+                            style="font-family: var(--font-heading); font-weight: 700; color: var(--color-accent-gold);">
+                            I-III d.C.</div>
+                        <div style="margin-top: 0.5rem;"><strong>L’età imperiale.</strong><br>Dionisio di Alicarnasso,
+                            Galeno, Plutarco, Luciano, la Settanta, la produzione giudaico-ellenistica, la letteratura
+                            cristiana</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Call to Action Next -->
+            <div style="margin-top: 4rem; margin-bottom: 6rem; text-align: center;">
+                <a href="analisi.html" class="cta-button"
+                    style="background-color: var(--color-bg-dark); color: white; padding: 1rem 3rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block;">
+                    Scopri i dati <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="styled-footer">
+        <div class="container">
+            <p>&copy; 2026 Progetto “Prodigi e mostri anti-cosmici: un’analisi computazionale di τέρας nella tradizione
+                letteraria greca” – Licenza CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

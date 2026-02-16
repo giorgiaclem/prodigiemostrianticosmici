@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+
+    <title>Collocazioni | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link active">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Split Layout -->
+    <div class="split-layout">
+
+        <!-- Left Pane: Visuals -->
+        <div class="visual-pane">
+            <h3 style="font-family: var(--font-heading); color: var(--color-text-muted); margin-bottom: 1rem;">Network
+                Semantico</h3>
+
+            <!-- iframe 1: TermsBerry -->
+            <iframe class="visual-frame" style="height: 90vh !important;"
+                src="https://voyant-tools.org/tool/TermsBerry/?palette=Category10&stopList=keywords-854db971992c04d4ab8f4a5b13689bbe&corpus=737b34cdb83ca8f15497288f413517bd"></iframe>
+
+            <!-- iframe 2 text: Collocates Graph removed per request, keeping relevant lists -->
+            <iframe class="visual-frame" style="height: 90vh !important;"
+                src="https://voyant-tools.org/tool/CollocatesGraph/?palette=Category10&corpus=737b34cdb83ca8f15497288f413517bd&query=teras"></iframe>
+
+        </div>
+
+        <!-- Right Pane: Text Content -->
+        <div class="text-pane">
+            <div class="text-pane-content">
+                <h1 class="analysis-title">La lista di collocazioni</h1>
+
+                <h4 class="analysis-subtitle" style="color: var(--color-accent-gold);">Cos'è?</h4>
+                <p class="analysis-text">
+                    Una lista di collocazioni offre informazioni sul contesto lessicale di un lemma. Si tratta di un
+                    elenco gerarchico delle parole che compaiono con maggiore regolarità in prossimità del nodo scelto.
+                    Risulta utile per individuare parole compaiono nelle immediate vicinanze del prodigio e
+                    contribuiscono a definirne le caratteristiche.
+                    <br><br>
+                    Un confronto tra la lista di frequenza e la lista delle collocazioni potrebbe mostrare come non
+                    tutte le parole frequenti nel corpus accompagnano davvero τέρας. Questo strumento filtra il "rumore"
+                    e rivela quali termini sono strutturalmente legati al prodigio, costruendone il significato.
+                </p>
+
+                <div style="margin-top: 3rem;">
+
+                    <!-- 1 -->
+                    <!-- 1 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">1. σημεῖον – 161 occorrenze</h4>
+                        <p class="analysis-text">
+                            Conferma il primato. Nei testi giudaico-ellenistici e cristiani, τέρας e σημεῖον
+                            costituiscono un binomio formulare: σημεῖα καὶ τέρατα ("segni e prodigi").
+                        </p>
+                    </div>
+
+                    <!-- 2 -->
+                    <!-- 2 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">2. μέγας – 29 occorrenze</h4>
+                        <p class="analysis-text">
+                            "Grande" non indica dimensione fisica. Il controllo dei testi rivela che μέγας qualifica la
+                            grandezza ontologica del prodigio.
+                            <br><br>
+                            Tre livelli semantici:
+                        </p>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--color-text-muted);">
+                            <li style="margin-bottom: 0.5rem;"><strong>Percettivo:</strong> amplifica l'impatto visivo,
+                                rende l'evento immediatamente riconoscibile come
+                                anomalo</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Simbolico:</strong> segnala la frattura
+                                nell'ordine cosmico</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Interpretativo:</strong> sottolinea la portata
+                                delle conseguenze</li>
+                        </ul>
+                        <p class="analysis-text" style="margin-top: 1rem;">
+                            Il prodigio è "grande" perché si impone all'esperienza con una forza tale da interrompere la
+                            continuità del reale, sfuggendo a qualsiasi categorizzazione ordinaria.
+                        </p>
+                    </div>
+
+                    <!-- 3 -->
+                    <!-- 3 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">3. δύναμις – 25 occorrenze</h4>
+
+                        <div
+                            style="background: #fff; padding: 1.5rem; border: 1px dashed var(--color-accent-gold); border-radius: 8px; margin: 1.5rem 0;">
+                            <strong style="color: var(--color-accent-gold);">Dato anomalo:</strong> δύναμις compare 62
+                            volte nel corpus totale, ma 25 volte sono accanto a τέρας. Questo dato segnale una forte
+                            attrazione attivata da δύναμις verso τέρας.
+                        </div>
+
+                        <div class="scoperta-box">
+                            <p class="analysis-text" style="margin-bottom: 1rem;">
+                                <strong>Scoperta:</strong> La stabilità del binomio non è casuale. Nella quasi totalità
+                                dei
+                                casi, i due termini non compaiono isolati, ma formano una triade formulare:<br>
+                                <center style="margin: 1rem 0; font-family: var(--font-heading); font-size: 1.1rem;">
+                                    τέρας – σημεῖον – δύναμις</center>
+                                <center style="font-size: 0.9rem; color: var(--color-text-muted);">("prodigi – segni –
+                                    potenze")</center>
+                            </p>
+                            <p class="analysis-text">
+                                Si tratta di un modulo tecnico dei testi cristiani che enfatizza la potenza divina da
+                                cui
+                                scaturisce il miracolo. <br>
+                                <br>
+                                <strong>Polarizzazione semantica:</strong>
+                                <br>• Riferita a Cristo/apostoli → miracolo autentico
+                                <br>• Riferita a Satana → + ψεῦδος (menzogna) = falso prodigio
+                                <br><br>
+                                Conferma che τέρας è vox media: acquista valore positivo o negativo dal contesto
+                                lessicale.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <!-- 4 -->
+                    <div class="collocazione-item">
+                        <h4 class="collo-header">4. θεός – 23 occorrenze</h4>
+                        <p class="analysis-text">
+                            Retrocessione significativa: da rango 2 nelle frequenze globali a rango inferiore nelle
+                            collocazioni.
+                            <br><strong>Cosa significa:</strong> θεός è frequentissimo nel corpus, ma non sempre in
+                            prossimità diretta di τέρας. Definisce lo scenario religioso generale, ma non co-occorre
+                            sistematicamente col prodigio.
+                            Resta comunque determinante nel delineare il contesto teologico in cui l'evento prodigioso
+                            si manifesta.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; margin-bottom: 4rem;">
+                    <a href="analisi-emozioni.html" class="cta-button"
+                        style="background-color: var(--color-bg-dark); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase;">
+                        Vai a reazione emotiva <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

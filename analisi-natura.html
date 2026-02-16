@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Progetto di tesi analisi computazionale" />
+    <meta name="keywords"
+        content="Greco antico, prodigio, mostro, analisi computazionale, voyant tools, filologia classica, digital humanities" />
+    <meta name="author" content="Giorgia Clemente" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dublin core-->
+    <meta name="DC.Title" content="τὸ τέρας">
+    <meta name="Dc.Creator" content="Giorgia Clemente">
+    <meta name="Dc.Subject" content="Analisi computazionale delle attestazioni letterarie greche di τέρας">
+    <meta name="Dc.Description" content="Esposizione del progetto di tesi di analisi computazionale">
+    <meta name="Dc.Publisher" content="Università di Bologna">
+    <meta name="Dc.Contributor" content="Corso Digital Humanities">
+    <meta name="Dc.Date" content="10/02/2026">
+    <meta name="Dc.Type" content="Digital storytelling">
+    <meta name="Dc.Format" content="HTML/CSS/JAVASCRIPT">
+    <meta name="Dc.Identifier" content="https://giorgiaclem.github.io/archiviovittorinadalmonte/">
+    <meta name="Dc.Source" content="Thesaurus Linguae Graecae">
+    <meta name="Dc.Language" content="it">
+    <meta name="Dc.Rights"
+        content="Licenza Creative Commons BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/">
+
+    <title>Analisi Natura | Genealogie del Prodigio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">τὸ τέρας</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="teoria.html" class="nav-link">Il Prodigio</a></li>
+            <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+            <!-- Dropdown Analysis -->
+            <li class="dropdown">
+                <a href="analisi.html" class="nav-link active">Analisi <i class="fas fa-chevron-down"
+                        style="font-size: 0.75em; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="analisi-frequenze.html">1. Lista di Frequenza</a>
+                    <a href="analisi-collocazioni.html">2. Collocazioni</a>
+                    <a href="analisi-emozioni.html">3. Emozioni</a>
+                    <a href="analisi-mostro.html">4. Mostruosità</a>
+                    <a href="analisi-natura.html">5. Natura</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Split Layout -->
+    <div class="split-layout">
+
+        <!-- Left Pane: Visuals -->
+        <div class="visual-pane">
+            <h3 style="font-family: var(--font-heading); color: var(--color-text-muted); margin-bottom: 1rem;">Analisi
+                del Rapporto Τέρας-Φύσις</h3>
+
+            <!-- iframe: Datawrapper -->
+            <iframe class="visual-frame" title="Costruzioni sintattiche del rapporto τέρας-φύσις"
+                aria-label="Barre impilate" id="datawrapper-chart-kSKhk" src="https://datawrapper.dwcdn.net/kSKhk/2/"
+                scrolling="no" frameborder="0"
+                style="width: 100%; min-width: 100% !important; border: none; height: 500px; margin-bottom: 1rem;"
+                data-external="1"></iframe>
+            <script
+                type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();</script>
+
+            <!-- Analysis Image -->
+            <img src="sankey%20(2).png" alt="Sankey Diagram of Functions"
+                style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 1rem;">
+            <p class="caption">Il diagramma mostra i flussi tra funzioni (sinistra) e ordine sintattico (destra).</p>
+        </div>
+
+        <!-- Right Pane: Text Content -->
+        <div class="text-pane">
+            <div class="text-pane-content">
+                <h1 class="analysis-title">Il rapporto tra τέρας e φύσις</h1>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">La domanda</h4>
+                    <p class="analysis-text">
+                        Una costante emerge da tutti i τέρατα: si pongono come rottura dell'ordine naturale. Il prodigio
+                        è
+                        "ciò che va contro natura". Come viene attestato nei testi il rapporto con la φύσις? Quando
+                        τέρας e
+                        φύσις compaiono insieme nei testi, quale ruolo gioca la natura? Si limita ad essere la norma
+                        violata, oppure entra in gioco in modi più complessi?
+                    </p>
+                </div>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Il metodo</h4>
+                    <p class="analysis-text">
+                        Si sono individuate 31 attestazioni in cui τέρας e φύσις co-occorrono nello stesso contesto. Per
+                        ogni caso si sono analizzati:
+                        <br>1. Formule tecniche: compare παρὰ φύσιν (contro natura) o κατὰ φύσιν (secondo natura)?
+                        <br>2. Ordine sintattico: τέρας precede φύσις o viceversa?
+                        <br>3. Funzione argomentativa: la natura definisce? genera? si oppone?
+                    </p>
+                </div>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">I dati</h4>
+
+                    <strong style="color: var(--color-bg-dark);">Ordine Sintattico</strong>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 2rem;">
+                        <li class="analysis-text" style="margin-bottom: 0.5rem;"><strong>10 casi:</strong> τέρας → φύσις
+                            (prima il mostro, poi la natura)</li>
+                        <li class="analysis-text" style="margin-bottom: 0.5rem;"><strong>5 casi:</strong> φύσις → τέρας
+                            (prima la natura, poi il mostro)</li>
+                        <li class="analysis-text" style="margin-bottom: 0.5rem;"><strong>16 casi:</strong> altre
+                            costruzioni
+                            sintattiche</li>
+                    </ul>
+                    <p class="analysis-text">Non c'è un ordine dominante. Le strategie argomentative variano a seconda
+                        del
+                        contesto.</p>
+
+                    <strong style="color: var(--color-bg-dark);">παρὰ φύσιν vs κατὰ φύσιν</strong>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 2rem;">
+                        <li class="analysis-text" style="margin-bottom: 0.5rem;"><strong>παρὰ φύσιν ("contro
+                                natura"):</strong> 10 contesti (32,3%)</li>
+                        <li class="analysis-text" style="margin-bottom: 0.5rem;"><strong>κατὰ φύσιν ("secondo
+                                natura"):</strong> 5 contesti (16,1%)</li>
+                        <li class="analysis-text" style="margin-bottom: 0.5rem;"><strong>Altre costruzioni (senza
+                                preposizioni):</strong> 16 contesti (51,6%)</li>
+                    </ul>
+
+                    <h4 class="collo-header" style="margin-top: 2rem;">Cosa emerge</h4>
+                    <p class="analysis-text">
+                        La formula "contro natura" (παρὰ φύσιν), pur presente e significativa, caratterizza meno di un
+                        terzo
+                        dei contesti. Il prodigio non è definito unicamente come opposizione alla norma naturale.
+                        Le due formule tecniche coprono quasi il 50% del campione. La relazione con la natura viene
+                        spesso
+                        narrata attraverso un linguaggio codificato.
+                        Ma il restante 51,6% mostra che il prodigio si lega all'idea di natura secondo molteplici
+                        funzioni
+                        argomentative, non solo oppositive.
+                    </p>
+                </div>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Le 7 Funzioni della Natura</h4>
+                    <p class="analysis-text">La lettura dei 31 testi ha rivelato 7 funzioni con cui φύσις viene
+                        impiegata:
+                    </p>
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.6;">
+                        <li><strong style="color: var(--color-accent-gold);">A - ONTOLOGICA (12.9%, 4 casi):</strong> La
+                            natura definisce cosa è τέρας</li>
+                        <li><strong style="color: var(--color-accent-gold);">B - CAUSALE-ESPLICATIVA (16.1%, 5
+                                casi):</strong> La natura spiega il τέρας</li>
+                        <li><strong style="color: var(--color-accent-gold);">C - GENERATIVA (29%, 9 casi):</strong> La
+                            natura genera il τέρας</li>
+                        <li><strong style="color: var(--color-accent-gold);">D - CONTRASTIVA (9.7%, 3 casi):</strong> La
+                            natura come polo opposto</li>
+                        <li><strong style="color: var(--color-accent-gold);">E - DESCRITTIVA (22.6%, 7 casi):</strong>
+                            La natura costituisce il mostro</li>
+                        <li><strong style="color: var(--color-accent-gold);">F - METALINGUISTICA (6.5%, 2
+                                casi):</strong> Riflessione teorica</li>
+                        <li><strong style="color: var(--color-accent-gold);">G - NEGATIVA (3.2%, 1 caso):</strong> La
+                            natura nega lo status di τέρας</li>
+                    </ul>
+                </div>
+
+                <div class="collocazione-item">
+                    <p class="analysis-text" style="margin-top: 0rem;">
+                        Il diagramma mostra i flussi tra funzioni (sinistra) e ordine sintattico (destra).
+                        Si nota una bipartizione chiara:
+                    </p>
+
+                    <div
+                        style="background: #fdfbf7; padding: 1.5rem; border-left: 4px solid var(--color-accent-gold); margin: 1.5rem 0;">
+                        <p class="analysis-text">
+                            <strong>Funzioni A, B, D, F → τέρας → φύσις</strong><br>
+                            (Prima il mostro, poi la natura lo definisce/spiega/contrasta)
+                        </p>
+                        <p class="analysis-text" style="margin-top: 1rem;">
+                            <strong>Funzioni C, E → φύσις → τέρας</strong><br>
+                            (Prima la natura, poi il mostro emerge da essa)
+                        </p>
+                    </div>
+
+                    <p class="analysis-text">
+                        Quando φύσις definisce o contrasta, segue il fenomeno; quando genera o costituisce, lo precede.
+                        L’ordine sintattico non è casuale, riflette dinamiche argomentative coerenti.
+                    </p>
+                </div>
+
+                <div class="collocazione-item">
+                    <h4 class="collo-header">Le risposte</h4>
+                    <p class="analysis-text">
+                        Il rapporto è ambivalente; la natura assume diverse funzioni rispetto all’esistenza e alla
+                        definizione del τέρας.
+                    </p>
+                    <div
+                        style="border: 1px solid var(--color-line); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                        <p class="analysis-text" style="margin-bottom: 0;">
+                            <strong style="color: var(--color-bg-dark);">Dato principale:</strong> La funzione
+                            generativa
+                            domina (29%). La natura produce i
+                            τέρατα. Il prodigio può essere:
+                            <br>• Rottura esterna: opposizione alla norma (παρὰ φύσιν)
+                            <br>• Rottura interna: fallimento del processo generativo (la natura mira a un fine ma
+                            sbaglia)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
